@@ -7,21 +7,15 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/ivLoginLogo"
-        android:layout_width="160dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        layout="@layout/partial_logo"
+        />
 
     <EditText
         android:id="@+id/etLoginUsername"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_component"
         android:drawableStart="@drawable/vector_person"
         style="@style/Theme.PlatziMusic.EditTextStyle"
         android:hint="@string/user_label"
@@ -33,7 +27,7 @@
         android:id="@+id/etLoginPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_component"
         android:drawableStart="@drawable/vector_lock"
         style="@style/Theme.PlatziMusic.EditTextStyle"
         android:hint="@string/password_label"
@@ -45,7 +39,7 @@
         android:id="@+id/bLogin"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/margin_component"
         android:background="@color/colorPrimary"
         android:text="@string/login_label"
         app:layout_constraintBottom_toBottomOf="parent"
